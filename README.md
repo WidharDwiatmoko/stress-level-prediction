@@ -9,21 +9,13 @@ To get started with this project, you can follow these steps:
    ```
    git clone https://github.com/WidharDwiatmoko/stress-level-prediction.git
    ```
-2. Create virtual environment
+2. Create virtual environment and install dependencies (using conda)
    ```
-   conda create -p venv python==3.9
-   conda activate venv/
-   ```
-
-3. Install the required dependencies:
-
-   ```
-   pip install -r requirements.txt
+   conda create --name venv --file requirements.txt
    ```
 
-
-4. Run streamlit app by using 
-`streamlit run app.py`
+3. Run streamlit app by using 
+`cd streamlit/streamlit run app.py`
 
 
 5. Streamlit deployment link (TBU)
