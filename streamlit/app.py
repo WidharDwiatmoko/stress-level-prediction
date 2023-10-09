@@ -37,7 +37,7 @@ selected = option_menu(
 )
 
 df = pd.read_csv('Dataset/dataset.csv')
-df.drop(['Person ID', 'Sick'], axis=1, inplace=True)
+df.drop(['Person ID'], axis=1, inplace=True)
 df = df[['Gender', 'Age', 'Occupation', 'Sleep Duration', 'Quality of Sleep',
        'Physical Activity Level', 'BMI Category', 'Heart Rate',
        'Daily Steps', 'Sleep Disorder', 'BP High', 'BP Low', 'Stress Level']]
@@ -150,9 +150,9 @@ if selected == "Dataset":
 if selected == "Prediction":
 
     accuracies = dict(
-        mape=0.04,
-        rmse=0.37,
-        r2=0.97
+        mape=0.02,
+        rmse=0.43,
+        r2=0.94
     )
 
     st.markdown(
