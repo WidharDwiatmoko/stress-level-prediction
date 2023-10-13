@@ -55,7 +55,10 @@ To get started with this project, you can follow these steps:
 `cd streamlit/streamlit run app.py`
 
 
-5. Streamlit deployment link (TBU)
+5. Streamlit deployment link : 
+   ```
+   https://stress-level-app.streamlit.app/
+   ```
 
 
 Feel free to modify the code and experiment with different models and techniques to improve the prediction accuracy.
