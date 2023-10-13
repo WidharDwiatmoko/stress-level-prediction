@@ -6,6 +6,10 @@ import joblib
 import plotly.graph_objects as go
 import pickle
 import time 
+from pathlib import Path
+import os
+
+
 
 
 st.set_page_config(
@@ -36,7 +40,19 @@ selected = option_menu(
     }
 )
 
-df = pd.read_csv('Dataset/dataset.csv')
+# get the absolute path to the directory contain the .csv file
+dir_name = os.path.abspath(os.path.dirname(__file__))
+
+# join the bobrza1.csv to directory to get file path
+location = os.path.join(dir_name, 'Dataset/dataset.csv')
+
+#df = pd.read_csv('Dataset/dataset.csv')
+df = pd.read_csv(location)
+
+#df = Path(__file__).parents[0] / 'Dataset/dataset.csv'
+
+
+
 df.drop(['Person ID'], axis=1, inplace=True)
 df = df[['Gender', 'Age', 'Occupation', 'Sleep Duration', 'Quality of Sleep',
        'Physical Activity Level', 'BMI Category', 'Heart Rate',
