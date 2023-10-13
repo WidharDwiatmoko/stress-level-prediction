@@ -251,15 +251,23 @@ if selected == "Prediction":
             Returns:
               a loaded linear regression model.
             """
-            with open('Models/model.pkl', 'rb') as f:
+#os.path.join(dir_name, 'Dataset/dataset.csv')
+            #with open('Models/model.pkl', 'rb') as f:
+            with open(os.path.join(dir_name, 'Models/model.pkl'), 'rb') as f:
                 model = pickle.load(f)
             return model
 
-        gender_le = joblib.load('Models/gender_encoder.pkl')
-        occupation_le = joblib.load('Models/occupation_encoder.pkl')
-        bmiCategory_le = joblib.load('Models/bmi_category_encoder.pkl')
-        sleepDisorder_le = joblib.load('Models/sleep_disorder_encoder.pkl')
-        scaler = joblib.load('Models/scaler.pkl')
+        #gender_le = joblib.load('Models/gender_encoder.pkl')
+        gender_le = joblib.load(os.path.join(dir_name, 'Models/gender_encoder.pkl'))
+        #occupation_le = joblib.load('Models/occupation_encoder.pkl')
+        occupation_le = joblib.load(os.path.join(dir_name, 'Models/occupation_encoder.pkl'))
+        #bmiCategory_le = joblib.load('Models/bmi_category_encoder.pkl')
+        bmiCategory_le = joblib.load(os.path.join(dir_name, 'Models/bmi_category_encoder.pkl'))
+        #sleepDisorder_le = joblib.load('Models/sleep_disorder_encoder.pkl')
+        sleepDisorder_le = joblib.load(os.path.join(dir_name, 'Models/sleep_disorder_encoder.pkl'))
+        #scaler = joblib.load('Models/scaler.pkl')
+        scaler = joblib.load(os.path.join(dir_name, 'Models/scaler.pkl'))
+
 
         col1, col2 = st.columns(2)
 
